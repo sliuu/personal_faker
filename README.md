@@ -32,7 +32,15 @@ my_faker = PersonalFaker::Base.new('macbeth')
 Then you can create sentences that are based on the text
 
 ```ruby
-title = my_faker.sentence
+my_faker.sentence # "Wild snow and one fell enter three witches dance and Macbeth."
+
+my_faker.text(3) # "Find mingle with drum and something wicked this great a heath. Thyself ourselves again banquo's buried he not for this downy sleep. Lesser ye go to scorn here I know it had else."
+
+my_faker.word # "assistance"
+
+my_faker.words(4) # "gentlewoman foot thou macduff's"
+
+my_faker.question # "Chuck room in deed without our nights watched with you lack?"
 ```
 
 ## Development

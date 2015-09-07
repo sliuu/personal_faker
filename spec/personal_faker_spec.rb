@@ -13,6 +13,7 @@ describe PersonalFaker do
 
       it "should make words with #{text}" do
         expect(faker.word).to be_a_kind_of String
+        expect(faker.words(4)).to be_a_kind_of String
       end
 
       it "should make phrases with the correct number of sentences" do

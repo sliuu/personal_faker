@@ -13,6 +13,8 @@ module PersonalFaker
         @file = 'lib/personal_faker/texts/pride-and-prejudice.rtf'
       elsif choose_text == 'macbeth'
         @file = 'lib/personal_faker/texts/macbeth.rtf'
+      else
+        raise StandardError, "No text with that name"
       end
     end
 
@@ -75,6 +77,14 @@ module PersonalFaker
 
     def word
       word = table.keys.sample
+    end
+
+    def words(count)
+      words = ""
+      count.times do
+        words << " " + word
+      end
+      words
     end
 
     def text_phrase(count)
