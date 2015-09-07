@@ -1,8 +1,9 @@
 # PersonalFaker
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/personal_faker`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem allows you to create fake sentences, questions, etc based on
+a famous text of your choosing.
 
-TODO: Delete this and the text above, and describe your gem
+On initialization, a table is created that matches each word in the text with the frequencies of words that come after it. The algorithm then loops through one word at a time, picking randomnly a word that comes after it in the text. If no word comes after it (i.e. the end of the text is reached, a random word from the text is chosen).
 
 ## Installation
 
@@ -22,7 +23,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Initialize the faker with your chosen text
+
+```ruby
+my_faker = PersonalFaker::Base.new('macbeth')
+```
+
+Then you can create sentences that are based on the text
+
+```ruby
+title = my_faker.sentence
+```
 
 ## Development
 
@@ -32,8 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/personal_faker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/sliuu/personal_faker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 ## License
 
