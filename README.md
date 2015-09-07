@@ -1,5 +1,9 @@
 # PersonalFaker
 
+[![Build Status](https://travis-ci.org/sliuu/personal_faker.svg?branch=master)][travis]
+
+[travis]: https://travis-ci.org/sliuu/personal_faker
+
 This gem allows you to create fake sentences, questions, etc based on
 a famous text of your choosing.
 
