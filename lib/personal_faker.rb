@@ -72,5 +72,17 @@ module PersonalFaker
       end
       sentence = sentence + "?"
     end
+
+    def word
+      word = table.keys.sample
+    end
+
+    def text_phrase(count)
+      phrase = sentence
+      (count - 1).times do
+        phrase << " " + sentence
+      end
+      phrase
+    end
   end
 end

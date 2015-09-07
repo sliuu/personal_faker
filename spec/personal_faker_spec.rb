@@ -9,8 +9,15 @@ describe PersonalFaker do
       it "should make sentences with #{text}" do
         expect(faker.sentence).to be_a_kind_of String
         expect(faker.question).to be_a_kind_of String
-        puts faker.sentence
-        puts faker.question
+      end
+
+      it "should make words with #{text}" do
+        expect(faker.word).to be_a_kind_of String
+      end
+
+      it "should make phrases with the correct number of sentences" do
+        expect(faker.text_phrase(10)).to be_a_kind_of String
+        expect(faker.text_phrase(5).count(".")).to be(5)
       end
     end
   end
